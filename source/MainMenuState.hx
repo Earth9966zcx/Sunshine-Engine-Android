@@ -132,8 +132,9 @@ class MainMenuState extends MusicBeatState
 
                 char1 = new Character(800, -130, 'gf', true);
                 char1.setGraphicSize(Std.int(char1.width * 0.8));
+                char1.animation.play('idle');
                 add(char1);
-                char1.visible = false;
+                char1.visible = true;
 
 	        var versionShit:FlxText = new FlxText(12, FlxG.height - 64, 0, "Sunshine Engine v" + sunshineEngineVersion, 12);
 		versionShit.scrollFactor.set();
