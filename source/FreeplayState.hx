@@ -47,6 +47,7 @@ class FreeplayState extends MusicBeatState
 	private var iconArray:Array<HealthIcon> = [];
 
 	var bg:FlxSprite;
+	var logoMenu:FlxSprite;
 	var intendedColor:Int;
 	var colorTween:FlxTween;
 
@@ -105,6 +106,14 @@ class FreeplayState extends MusicBeatState
 		bg.antialiasing = ClientPrefs.globalAntialiasing;
 		add(bg);
 		bg.screenCenter();
+
+                logoMenu = new FlxSprite(820, 170).loadGraphic(Paths.image('mainmenu/logoBumpinMenu'));//put your cords and image here
+                logoMneu.frames = Paths.getSparrowAtlas('mainmenu/logoBumpinMenu');//here put the name of the xml
+                logoMenu.animation.addByPrefix('LogoBumpin', 'logo bumpin', 24, true);//on 'idle normal' change it to your xml one
+                logoMenu.animation.play('LogoBumpin');//you can rename the anim however you want to
+                logoMenu.scrollFactor.set();
+                logoMenu.antialiasing = ClientPrefs.globalAntialiasing;
+                add(logoMenu);
 
 		grpSongs = new FlxTypedGroup<Alphabet>();
 		add(grpSongs);
