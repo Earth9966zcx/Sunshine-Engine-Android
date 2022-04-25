@@ -108,7 +108,7 @@ class FreeplayState extends MusicBeatState
 		bg.screenCenter();
 
                 logoMenu = new FlxSprite(820, 170).loadGraphic(Paths.image('mainmenu/logoBumpinMenu'));//put your cords and image here
-                logoMneu.frames = Paths.getSparrowAtlas('mainmenu/logoBumpinMenu');//here put the name of the xml
+                logoMenu.frames = Paths.getSparrowAtlas('mainmenu/logoBumpinMenu');//here put the name of the xml
                 logoMenu.animation.addByPrefix('LogoBumpin', 'logo bumpin', 24, true);//on 'idle normal' change it to your xml one
                 logoMenu.animation.play('LogoBumpin');//you can rename the anim however you want to
                 logoMenu.scrollFactor.set();
