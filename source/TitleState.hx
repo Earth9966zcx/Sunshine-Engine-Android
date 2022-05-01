@@ -46,7 +46,6 @@ typedef TitleData =
 	starty:Float,
 	gfx:Float,
 	gfy:Float,
-        sizelogo:Float,
 	backgroundSprite:String,
 	bpm:Int
 }
@@ -272,7 +271,7 @@ class TitleState extends MusicBeatState
 		// bg.updateHitbox();
 		add(bg);
 
-		logoBl = new FlxSprite(titleJSON.titlex, titleJSON.titley, titleJSON.sizelogo);
+		logoBl = new FlxSprite(titleJSON.titlex, titleJSON.titley);
 		logoBl.frames = Paths.getSparrowAtlas('logoBumpin');
 		
 		logoBl.antialiasing = ClientPrefs.globalAntialiasing;
@@ -580,16 +579,15 @@ class TitleState extends MusicBeatState
 			{
 				case 1:
 					#if PSYCH_WATERMARKS
-					createCoolText(['Psych Engine by'], 15);
+					createCoolText(['Sunshine Engine by'], 15);
 					#else
 					createCoolText(['ninjamuffin99', 'phantomArcade', 'kawaisprite', 'evilsk8er']);
 					#end
 				// credTextShit.visible = true;
 				case 3:
 					#if PSYCH_WATERMARKS
-					addMoreText('Shadow Mario', 15);
-					addMoreText('RiverOaken', 15);
-					addMoreText('shubs', 15);
+					addMoreText('RenanGamerProOficial', 15);
+					addMoreText('NotAn127', 15);
 					#else
 					addMoreText('present');
 					#end
