@@ -46,6 +46,7 @@ typedef TitleData =
 	starty:Float,
 	gfx:Float,
 	gfy:Float,
+        sizelogo:Float,
 	backgroundSprite:String,
 	bpm:Int
 }
@@ -271,7 +272,7 @@ class TitleState extends MusicBeatState
 		// bg.updateHitbox();
 		add(bg);
 
-		logoBl = new FlxSprite(titleJSON.titlex, titleJSON.titley);
+		logoBl = new FlxSprite(titleJSON.titlex, titleJSON.titley, titleJSON.sizelogo);
 		logoBl.frames = Paths.getSparrowAtlas('logoBumpin');
 		
 		logoBl.antialiasing = ClientPrefs.globalAntialiasing;
