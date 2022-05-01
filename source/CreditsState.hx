@@ -83,9 +83,7 @@ class CreditsState extends MusicBeatState
 		var pisspoop:Array<Array<String>>= [ //Name - Icon name - Description - Link - BG Color
 			['Sunshine Engine Team'],
 			['Renan Gamer Pro Oficial',		'renangamerprooficial',		'Main Programmer of Sunshine Engine',							'https://youtube.com/c/RenanGamerProOficialJogos',	'444444'],
-		        ['NotAn127','angel','Made the game icon','https://youtube.com/channel/UClCnZLZxavnHD7aaIyzdZiA', 'F73838'],
-                        ['Early Access'],
-		        ['Nupersovae.xml','nupersovae','Early Access','https://youtube.com/channel/UCT-O8O_mwkRE0TNlkh6l8Kg', 'F73838']
+		        ['NotAn127','angel','Made the game icon','https://youtube.com/channel/UClCnZLZxavnHD7aaIyzdZiA', 'F73838']
 		];
 		
 		for(i in pisspoop){
