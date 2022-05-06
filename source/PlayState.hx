@@ -884,9 +884,7 @@ class PlayState extends MusicBeatState
 		timeTxt.alpha = 0;
 		timeTxt.borderSize = 2;
 		timeTxt.visible = showTime;
-		if(ClientPrefs.downScroll)
-		timeTxt.y = FlxG.height - 44;
-		watermark.y = FlxG.height - 38;
+		if(ClientPrefs.downScroll)timeTxt.y = FlxG.height - 44;
 
 		if(ClientPrefs.timeBarType == 'Song Name')
 		{
@@ -1043,11 +1041,12 @@ class PlayState extends MusicBeatState
 		scoreTxt.visible = !ClientPrefs.hideHud;
 		add(scoreTxt);
 
-		watermark = new FlxText(scoreTxt.x + 30, scoreTxt.y, 0, "Sunshine Engine V:" + MainMenuState.sunshineEngineVersion, 20);
+		watermark = new FlxText(0, 388, 0, "Sunshine Engine V:" + MainMenuState.sunshineEngineVersion, 20);
 		watermark.scrollFactor.set();
 		watermark.borderSize = 1.25;
 		watermark.setFormat(Paths.font("vcr.ttf"), 20, FlxColor.WHITE, CENTER, FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
 		watermark.visible = !ClientPrefs.hideHud;
+		if(ClientPrefs.downScroll)watermark.y = 89;
 		add(watermark);
 
 		botplayTxt = new FlxText(400, timeBarBG.y + 55, FlxG.width - 800, "BOTPLAY", 32);
